@@ -42,16 +42,26 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> 
     static class ViewHolder extends RecyclerView.ViewHolder{
         TextView movieName;
         TextView peopleCount;
+        TextView movieRank;
+        TextView movieAccrue;
+        TextView releaseDate;
 
           public ViewHolder(View itemView){
               super(itemView);
               movieName = itemView.findViewById(R.id.MovieName);
               peopleCount = itemView.findViewById(R.id.peopleCount);
+              movieRank = itemView.findViewById(R.id.movieRank);
+              movieAccrue = itemView.findViewById(R.id.movieAccrue);
+              releaseDate = itemView.findViewById(R.id.releaseDate);
           }
           public void setItem(Movie item)
           {
               movieName.setText(item.movieNm);
-              peopleCount.setText(item.audiCnt);
+              peopleCount.setText(item.audiCnt + "명");
+              movieRank.setText(item.rank + "위");
+              movieAccrue.setText("누적관객수: " + item.audiAcc + "명");
+              releaseDate.setText("개봉일: " + item.openDt );
+
           }
     }
 }

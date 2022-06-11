@@ -26,7 +26,7 @@ import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
     EditText requestText;
-    TextView responseText;
+   // TextView responseText;
 
     static RequestQueue requestQueue;
 
